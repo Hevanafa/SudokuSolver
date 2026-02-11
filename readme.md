@@ -13,6 +13,9 @@ After solving:
 ## Usage
 
 1. Enter numbers into the empty cells
+
+   You can use mouse, arrow keys and backspace to correct your inputs
+
 2. Click **Solve** to let the algorithm fill in the rest
 3. Bolded cells show the solver's solution
 4. Click **Clear** to start over
