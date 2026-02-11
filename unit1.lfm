@@ -1,0 +1,66 @@
+object Form1: TForm1
+  Left = 336
+  Height = 426
+  Top = 101
+  Width = 507
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Sudoku Solver - By Hevanafa (Nov 2025)'
+  ClientHeight = 426
+  ClientWidth = 507
+  OnCreate = FormCreate
+  LCLVersion = '3.6.0.0'
+  object ClearButton: TButton
+    Left = 8
+    Height = 41
+    Top = 376
+    Width = 75
+    Caption = 'Clear'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 2
+    OnClick = ClearButtonClick
+  end
+  object Edit1: TEdit
+    Left = 96
+    Height = 27
+    Top = 376
+    Width = 30
+    Color = clGreen
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    NumbersOnly = True
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+  end
+  object PreviewLabel: TLabel
+    Left = 392
+    Height = 15
+    Top = 16
+    Width = 102
+    Caption = '1, 2, 3, 4, 5, 6, 7, 8, 9'
+  end
+  object SolveButton: TButton
+    Left = 296
+    Height = 41
+    Top = 376
+    Width = 75
+    Caption = 'Solve'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Tahoma'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    OnClick = SolveButtonClick
+  end
+end
