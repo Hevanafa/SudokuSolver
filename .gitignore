@@ -1,6 +1,7 @@
 # Lazarus stuff
 backup/
 lib/
+dist/
 *.lps
 *.exe
 *.dbg
