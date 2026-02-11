@@ -10,6 +10,13 @@ After solving:
 
 ![after](./preview_after.png)
 
+## Usage
+
+1. Enter numbers into the empty cells
+2. Click **Solve** to let the algorithm fill in the rest
+3. Bolded cells show the solver's solution
+4. Click **Clear** to start over
+
 ## Requirements
 
 - Lazarus IDE (v3.6 by the time of writing)
