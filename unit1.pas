@@ -102,7 +102,6 @@ type
     ShapeLineBGRA4: TShapeLineBGRA;
     SolveButton: TButton;
     ClearButton: TButton;
-    Edit1: TEdit;
 
     procedure FormShow(Sender: TObject);
 
@@ -116,7 +115,7 @@ type
     procedure EditChange(Sender: TObject);
     procedure EditEnter(Sender: TObject);
   private
-
+    solvedGrid: array[0..8, 0..8] of boolean;  { solved by the algorithm }
   public
 
   end;
@@ -311,6 +310,10 @@ begin
       grid[row-1][col-1] := 0;
   end;
 
+  for row:=0 to 8 do
+  for col:=0 to 8 do
+    solvedGrid[row][col] := false;
+
   { Debug numbers }
   PreviewLabel.caption := '';
   for row:=0 to 8 do begin
@@ -326,16 +329,17 @@ begin
 
   if solveSudoku(grid) then
     for row:=1 to 9 do
-      for col:=1 to 9 do begin
-        inputbox := getEdit(row, col);
+    for col:=1 to 9 do begin
+      solvedGrid[row-1][col-1] := true;
+      inputbox := getEdit(row, col);
 
-        if length(inputbox.text) = 0 then begin
-          inputbox.Font.Bold := true;
-          inputbox.color := clSkyBlue;
-        end;
+      if length(inputbox.text) = 0 then begin
+        inputbox.Font.Bold := true;
+        inputbox.color := clSkyBlue;
+      end;
 
-        inputbox.text := inttostr(grid[row-1][col-1]);
-      end
+      inputbox.text := inttostr(grid[row-1][col-1]);
+    end
   else
     MessageDlg('No solutions found', mtInformation, [mbOK], 0);
 end;
