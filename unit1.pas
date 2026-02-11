@@ -95,7 +95,7 @@ type
     Input97: TEdit;
     Input98: TEdit;
     Input99: TEdit;
-    PreviewLabel: TLabel;
+    DebugLabel: TLabel;
     ShapeLineBGRA1: TShapeLineBGRA;
     ShapeLineBGRA2: TShapeLineBGRA;
     ShapeLineBGRA3: TShapeLineBGRA;
@@ -274,18 +274,43 @@ end;
 procedure TForm1.EditEnter(Sender: TObject);
 var
   thisEdit: TEdit;
+  row, col, a: smallint;
 begin
   thisEdit := TEdit(sender);
   thisEdit.Color := highlight1;
-  thisEdit.SelectAll
+  thisEdit.SelectAll;
+
+  DebugLabel.Caption := thisEdit.name;
+  row := strtoint(thisEdit.name[6]);
+  col := strtoint(thisEdit.name[7]);
+
+  for a:=1 to 9 do
+    if col <> a then
+      getEdit(row, a).color := highlight2;
+
+  for a:=1 to 9 do
+    if row <> a then
+      getEdit(a, col).color := highlight2;
 end;
 
 procedure TForm1.EditExit(Sender: TObject);
 var
   thisEdit: TEdit;
+  row, col, a: smallint;
 begin
   thisEdit := TEdit(sender);
   thisEdit.Color := defaultBackground;
+
+  row := strtoint(thisEdit.name[6]);
+  col := strtoint(thisEdit.name[7]);
+
+  for a:=1 to 9 do
+    if col <> a then
+      getEdit(row, a).color := defaultBackground;
+
+  for a:=1 to 9 do
+    if row <> a then
+      getEdit(a, col).color := defaultBackground;
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
@@ -295,8 +320,8 @@ var
 begin
   defaultBackground := RGBToBGR($202020);
   accent := RGBToBGR($ECF708);
-  highlight1 := RGBToBGR($555b04);
-  highlight2 := RGBToBGR($8f9907);
+  highlight1 := RGBToBGR($8f9907);
+  highlight2 := RGBToBGR($555b04);
 
   color := defaultBackground;
 
@@ -350,7 +375,7 @@ begin
     solvedGrid[row][col] := false;
 
   { Debug numbers }
-  PreviewLabel.caption := '';
+  DebugLabel.caption := '';
   for row:=0 to 8 do begin
     tempStr := '';
     for col:=0 to 8 do
@@ -359,7 +384,7 @@ begin
       else
         tempStr := tempStr + inttostr(grid[row][col]) + ', ';
 
-    PreviewLabel.caption := PreviewLabel.caption + tempStr + chr(13);
+    DebugLabel.caption := DebugLabel.caption + tempStr + chr(13);
   end;
 
   if solveSudoku(grid) then
@@ -386,7 +411,7 @@ var
 begin
   if MessageDlg('Clear inputs?', mtConfirmation, [mbYes, mbNo], 0) <> mrYes then exit;
 
-  PreviewLabel.caption := '';
+  DebugLabel.caption := '';
 
   for b:=0 to 8 do
   for a:=0 to 8 do begin
