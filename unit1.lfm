@@ -51,6 +51,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -66,6 +67,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -81,6 +83,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -96,6 +99,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -111,6 +115,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -126,6 +131,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -141,6 +147,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -156,6 +163,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -171,6 +179,7 @@ object Form1: TForm1
     Height = 30
     Top = 8
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -186,6 +195,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -201,6 +211,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -216,6 +227,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -231,6 +243,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -246,6 +259,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -261,6 +275,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -276,6 +291,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -291,6 +307,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -306,6 +323,7 @@ object Form1: TForm1
     Height = 30
     Top = 40
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -321,6 +339,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -336,6 +355,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -351,6 +371,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -366,6 +387,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -381,6 +403,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -396,6 +419,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -411,6 +435,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -426,6 +451,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -441,6 +467,7 @@ object Form1: TForm1
     Height = 30
     Top = 72
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -456,6 +483,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -471,6 +499,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -486,6 +515,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -501,6 +531,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -516,6 +547,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -531,6 +563,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -546,6 +579,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -561,6 +595,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -576,6 +611,7 @@ object Form1: TForm1
     Height = 30
     Top = 104
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -591,6 +627,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -606,6 +643,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -621,6 +659,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -636,6 +675,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -651,6 +691,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -666,6 +707,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -681,6 +723,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -696,6 +739,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -711,6 +755,7 @@ object Form1: TForm1
     Height = 30
     Top = 136
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -726,6 +771,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -741,6 +787,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -756,6 +803,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -771,6 +819,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -786,6 +835,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -801,6 +851,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -816,6 +867,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -831,6 +883,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -846,6 +899,7 @@ object Form1: TForm1
     Height = 30
     Top = 168
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -861,6 +915,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -876,6 +931,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -891,6 +947,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -906,6 +963,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -921,6 +979,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -936,6 +995,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -951,6 +1011,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -966,6 +1027,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -981,6 +1043,7 @@ object Form1: TForm1
     Height = 30
     Top = 200
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -996,6 +1059,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1011,6 +1075,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1026,6 +1091,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1041,6 +1107,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1056,6 +1123,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1071,6 +1139,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1086,6 +1155,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1101,6 +1171,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1116,6 +1187,7 @@ object Form1: TForm1
     Height = 30
     Top = 232
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1131,6 +1203,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1146,6 +1219,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1161,6 +1235,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1176,6 +1251,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1191,6 +1267,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1206,6 +1283,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1221,6 +1299,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1236,6 +1315,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
@@ -1251,6 +1331,7 @@ object Form1: TForm1
     Height = 30
     Top = 264
     Width = 30
+    Alignment = taCenter
     AutoSize = False
     Font.CharSet = ANSI_CHARSET
     Font.Height = -19
