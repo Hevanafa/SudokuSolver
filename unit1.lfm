@@ -207,6 +207,7 @@ object Form1: TForm1
     Caption = '1, 2, 3, 4, 5, 6, 7, 8, 9'
     Font.Color = clWhite
     ParentFont = False
+    Visible = False
   end
   object Input11: TEdit
     Left = 40

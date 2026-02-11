@@ -130,6 +130,8 @@ type
     solvedGrid: array[0..8, 0..8] of boolean;  { solved by the algorithm }
 
     procedure debugNumbers;
+    procedure disableSolveButton;
+    procedure enableSolveButton;
   public
 
   end;
@@ -380,12 +382,26 @@ begin
   end;
 end;
 
+procedure TForm1.disableSolveButton;
+begin
+  SolveButton.Enabled := false;
+  SolveButton.Cursor := crNo;
+end;
+
+procedure TForm1.enableSolveButton;
+begin
+  SolveButton.Enabled := true;
+  SolveButton.Cursor := crDefault;
+end;
+
 procedure TForm1.SolveButtonClick(Sender: TObject);
 var
   row, col: integer;
   val: integer;
   inputbox: TEdit;
 begin
+  disableSolveButton;
+
   for row:=1 to 9 do
   for col:=1 to 9 do begin
     inputbox := getEdit(row, col);
@@ -415,8 +431,10 @@ begin
 
       inputbox.text := inttostr(stateGrid[row-1][col-1]);
     end
-  else
+  else begin
     MessageDlg('No solutions found', mtInformation, [mbOK], 0);
+    enableSolveButton;
+  end;
 end;
 
 procedure TForm1.ClearButtonClick(Sender: TObject);
@@ -425,6 +443,8 @@ var
   inputbox: TEdit;
 begin
   if MessageDlg('Clear inputs?', mtConfirmation, [mbYes, mbNo], 0) <> mrYes then exit;
+
+  enableSolveButton;
 
   DebugLabel.caption := '';
 
