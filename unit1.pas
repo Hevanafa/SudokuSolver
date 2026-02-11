@@ -109,12 +109,17 @@ type
     function getEdit(const row, col: integer): TEdit;
 
     procedure ClearButtonClick(Sender: TObject);
+    procedure EditExit(Sender: TObject);
     procedure SolveButtonClick(Sender: TObject);
 
     procedure EditKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
     procedure EditChange(Sender: TObject);
     procedure EditEnter(Sender: TObject);
   private
+    { Colours are in BGR }
+    defaultBackground: longword;
+    accent: longword;
+
     solvedGrid: array[0..8, 0..8] of boolean;  { solved by the algorithm }
   public
 
@@ -257,12 +262,28 @@ begin
 end;
 }
 
+function RGBToBGR(colour: longword): longword;
+begin
+  result := (colour and $FF) shl 16
+  or (colour and $FF00)
+  or (colour shr 16) and $FF
+end;
+
 procedure TForm1.EditEnter(Sender: TObject);
 var
   thisEdit: TEdit;
 begin
   thisEdit := TEdit(sender);
+  thisEdit.Color := RGBToBGR($6495ED);
   thisEdit.SelectAll
+end;
+
+procedure TForm1.EditExit(Sender: TObject);
+var
+  thisEdit: TEdit;
+begin
+  thisEdit := TEdit(sender);
+  thisEdit.Color := defaultBackground;
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
@@ -270,12 +291,21 @@ var
   a, b: word;
   inputbox: TEdit;
 begin
+  defaultBackground := RGBToBGR($202020);
+  accent := RGBToBGR($F8C056);
+
+  color := defaultBackground;
+
   for b:=1 to 9 do
   for a:=1 to 9 do begin
     inputbox := getEdit(b, a);
+
+    inputbox.Color := defaultBackground;
+
     inputbox.OnKeyDown := EditKeyDown;
     inputbox.OnChange := EditChange;
     inputbox.OnEnter := EditEnter;
+    inputbox.OnExit := EditExit;
   end;
 end;
 
