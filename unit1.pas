@@ -6,19 +6,106 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls,
+  Graphics, Dialogs, StdCtrls, ATShapeLineBGRA;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    Input11: TEdit;
+    Input12: TEdit;
+    Input13: TEdit;
+    Input14: TEdit;
+    Input15: TEdit;
+    Input16: TEdit;
+    Input17: TEdit;
+    Input18: TEdit;
+    Input19: TEdit;
+    Input21: TEdit;
+    Input22: TEdit;
+    Input23: TEdit;
+    Input24: TEdit;
+    Input25: TEdit;
+    Input26: TEdit;
+    Input27: TEdit;
+    Input28: TEdit;
+    Input29: TEdit;
+    Input31: TEdit;
+    Input32: TEdit;
+    Input33: TEdit;
+    Input34: TEdit;
+    Input35: TEdit;
+    Input36: TEdit;
+    Input37: TEdit;
+    Input38: TEdit;
+    Input39: TEdit;
+    Input41: TEdit;
+    Input42: TEdit;
+    Input43: TEdit;
+    Input44: TEdit;
+    Input45: TEdit;
+    Input46: TEdit;
+    Input47: TEdit;
+    Input48: TEdit;
+    Input49: TEdit;
+    Input51: TEdit;
+    Input52: TEdit;
+    Input53: TEdit;
+    Input54: TEdit;
+    Input55: TEdit;
+    Input56: TEdit;
+    Input57: TEdit;
+    Input58: TEdit;
+    Input59: TEdit;
+    Input61: TEdit;
+    Input62: TEdit;
+    Input63: TEdit;
+    Input64: TEdit;
+    Input65: TEdit;
+    Input66: TEdit;
+    Input67: TEdit;
+    Input68: TEdit;
+    Input69: TEdit;
+    Input71: TEdit;
+    Input72: TEdit;
+    Input73: TEdit;
+    Input74: TEdit;
+    Input75: TEdit;
+    Input76: TEdit;
+    Input77: TEdit;
+    Input78: TEdit;
+    Input79: TEdit;
+    Input81: TEdit;
+    Input82: TEdit;
+    Input83: TEdit;
+    Input84: TEdit;
+    Input85: TEdit;
+    Input86: TEdit;
+    Input87: TEdit;
+    Input88: TEdit;
+    Input89: TEdit;
+    Input91: TEdit;
+    Input92: TEdit;
+    Input93: TEdit;
+    Input94: TEdit;
+    Input95: TEdit;
+    Input96: TEdit;
+    Input97: TEdit;
+    Input98: TEdit;
+    Input99: TEdit;
     PreviewLabel: TLabel;
+    ShapeLineBGRA1: TShapeLineBGRA;
+    ShapeLineBGRA2: TShapeLineBGRA;
+    ShapeLineBGRA3: TShapeLineBGRA;
+    ShapeLineBGRA4: TShapeLineBGRA;
     SolveButton: TButton;
     ClearButton: TButton;
     Edit1: TEdit;
 
     procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
 
     function getEditName(const row, col: integer): string;
     function getEdit(const row, col: integer): TEdit;
@@ -140,6 +227,7 @@ begin
   SolveSudoku := false
 end;
 
+{
 procedure TForm1.FormCreate(Sender: TObject);
 var
   a, b: integer;
@@ -168,12 +256,8 @@ begin
     inputbox.OnChange := EditChange;
     inputbox.OnEnter := EditEnter;
   end;
-  { tedit.Create(self); }
-
-  { inputBox := TEdit(FindComponent('Input67'));
-  if assigned(inputBox) then
-    inputBox.text := '67'; }
 end;
+}
 
 procedure TForm1.EditEnter(Sender: TObject);
 var
@@ -181,6 +265,20 @@ var
 begin
   thisEdit := TEdit(sender);
   thisEdit.SelectAll
+end;
+
+procedure TForm1.FormShow(Sender: TObject);
+var
+  a, b: word;
+  inputbox: TEdit;
+begin
+  for b:=0 to 8 do
+  for a:=0 to 8 do begin
+    inputbox := getEdit(b, a);
+    inputbox.OnKeyDown := EditKeyDown;
+    inputbox.OnChange := EditChange;
+    inputbox.OnEnter := EditEnter;
+  end;
 end;
 
 function TForm1.getEditName(const row, col: integer): string;
@@ -288,15 +386,8 @@ begin
     vk_right: inc(col);
   end;
 
-  { if (0 <= row) and (row < 9) and (0 <= col) and (col < 9) then begin }
-  if (row in [0..8]) and (col in [0..8]) then begin
+  if (row in [0..8]) and (col in [0..8]) then
     getEdit(row, col).SetFocus;
-
-    { newName := getEditName(row, col);
-    newEdit := TEdit(FindComponent(newName));
-    if assigned(newEdit) then
-      newEdit.SetFocus; }
-  end;
 end;
 
 procedure TForm1.EditChange(Sender: TObject);
