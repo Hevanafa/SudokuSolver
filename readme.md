@@ -1,6 +1,6 @@
 # Sudoku Solver
 
-(TODO: Intro)
+A fast and convenient Sudoku puzzle solver written in Object Pascal
 
 Before solving:
 
@@ -18,6 +18,10 @@ After solving:
 
 - [BGRAControls](https://github.com/bgrabitmap/bgracontrols)
 
+You can install additional online packages by **Package > Online Package Manager** in Lazarus
+
 ## Building
 
-(TODO:)
+1. Open `project.lpi` with Lazarus IDE
+2. Change the build mode to **Release**
+3. Make with **Run > Compile** (also by `Ctrl+F9`)
