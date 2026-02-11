@@ -15,6 +15,7 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    SolveButton: TBCButton;
     ClearButton: TBCButton;
     Input11: TEdit;
     Input12: TEdit;
@@ -102,7 +103,6 @@ type
     ShapeLineBGRA2: TShapeLineBGRA;
     ShapeLineBGRA3: TShapeLineBGRA;
     ShapeLineBGRA4: TShapeLineBGRA;
-    SolveButton: TButton;
 
     procedure FormShow(Sender: TObject);
 
@@ -385,7 +385,6 @@ var
   row, col: integer;
   val: integer;
   inputbox: TEdit;
-  tempStr: string;
 begin
   for row:=1 to 9 do
   for col:=1 to 9 do begin

@@ -2,15 +2,15 @@ object Form1: TForm1
   Left = 336
   Height = 356
   Top = 101
-  Width = 308
+  Width = 368
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Sudoku Solver - By Hevanafa (Feb 2026)'
   ClientHeight = 356
-  ClientWidth = 308
+  ClientWidth = 368
   OnShow = FormShow
   object ClearButton: TBCButton
-    Left = 8
+    Left = 40
     Height = 41
     Top = 304
     Width = 80
@@ -62,6 +62,7 @@ object Form1: TForm1
     StateHover.FontEx.ShadowOffsetX = 1
     StateHover.FontEx.ShadowOffsetY = 1
     StateHover.FontEx.Style = [fsBold]
+    StateNormal.Background.Color = 2105376
     StateNormal.Background.Gradient1.StartColor = 4194304
     StateNormal.Background.Gradient1.EndColor = 8405056
     StateNormal.Background.Gradient1.GradientType = gtLinear
@@ -103,8 +104,103 @@ object Form1: TForm1
     TextApplyGlobalOpacity = False
     MemoryUsage = bmuLow
   end
+  object SolveButton: TBCButton
+    Left = 232
+    Height = 41
+    Top = 304
+    Width = 94
+    StateClicked.Background.Gradient1.StartColor = 8404992
+    StateClicked.Background.Gradient1.EndColor = 4194304
+    StateClicked.Background.Gradient1.GradientType = gtRadial
+    StateClicked.Background.Gradient1.Point1XPercent = 50
+    StateClicked.Background.Gradient1.Point1YPercent = 100
+    StateClicked.Background.Gradient1.Point2XPercent = 0
+    StateClicked.Background.Gradient1.Point2YPercent = 0
+    StateClicked.Background.Gradient2.StartColor = clWhite
+    StateClicked.Background.Gradient2.EndColor = clBlack
+    StateClicked.Background.Gradient2.GradientType = gtLinear
+    StateClicked.Background.Gradient2.Point1XPercent = 0
+    StateClicked.Background.Gradient2.Point1YPercent = 0
+    StateClicked.Background.Gradient2.Point2XPercent = 0
+    StateClicked.Background.Gradient2.Point2YPercent = 100
+    StateClicked.Background.Gradient1EndPercent = 100
+    StateClicked.Background.Style = bbsGradient
+    StateClicked.Border.Style = bboNone
+    StateClicked.FontEx.Color = 16770790
+    StateClicked.FontEx.FontQuality = fqSystemClearType
+    StateClicked.FontEx.Shadow = True
+    StateClicked.FontEx.ShadowRadius = 2
+    StateClicked.FontEx.ShadowOffsetX = 1
+    StateClicked.FontEx.ShadowOffsetY = 1
+    StateClicked.FontEx.Style = [fsBold]
+    StateHover.Background.Gradient1.StartColor = 16744448
+    StateHover.Background.Gradient1.EndColor = 8404992
+    StateHover.Background.Gradient1.GradientType = gtRadial
+    StateHover.Background.Gradient1.Point1XPercent = 50
+    StateHover.Background.Gradient1.Point1YPercent = 100
+    StateHover.Background.Gradient1.Point2XPercent = 0
+    StateHover.Background.Gradient1.Point2YPercent = 0
+    StateHover.Background.Gradient2.StartColor = clWhite
+    StateHover.Background.Gradient2.EndColor = clBlack
+    StateHover.Background.Gradient2.GradientType = gtLinear
+    StateHover.Background.Gradient2.Point1XPercent = 0
+    StateHover.Background.Gradient2.Point1YPercent = 0
+    StateHover.Background.Gradient2.Point2XPercent = 0
+    StateHover.Background.Gradient2.Point2YPercent = 100
+    StateHover.Background.Gradient1EndPercent = 100
+    StateHover.Background.Style = bbsGradient
+    StateHover.Border.Style = bboNone
+    StateHover.FontEx.Color = clWhite
+    StateHover.FontEx.FontQuality = fqSystemClearType
+    StateHover.FontEx.Shadow = True
+    StateHover.FontEx.ShadowRadius = 2
+    StateHover.FontEx.ShadowOffsetX = 1
+    StateHover.FontEx.ShadowOffsetY = 1
+    StateHover.FontEx.Style = [fsBold]
+    StateNormal.Background.Color = 2105376
+    StateNormal.Background.Gradient1.StartColor = 4194304
+    StateNormal.Background.Gradient1.EndColor = 8405056
+    StateNormal.Background.Gradient1.GradientType = gtLinear
+    StateNormal.Background.Gradient1.Point1XPercent = 0
+    StateNormal.Background.Gradient1.Point1YPercent = 0
+    StateNormal.Background.Gradient1.Point2XPercent = 0
+    StateNormal.Background.Gradient1.Point2YPercent = 100
+    StateNormal.Background.Gradient2.StartColor = 8405056
+    StateNormal.Background.Gradient2.EndColor = 4194304
+    StateNormal.Background.Gradient2.GradientType = gtRadial
+    StateNormal.Background.Gradient2.Point1XPercent = 50
+    StateNormal.Background.Gradient2.Point1YPercent = 100
+    StateNormal.Background.Gradient2.Point2XPercent = 0
+    StateNormal.Background.Gradient2.Point2YPercent = 0
+    StateNormal.Background.Gradient1EndPercent = 60
+    StateNormal.Background.Style = bbsColor
+    StateNormal.Border.Color = 587756
+    StateNormal.Border.Style = bboSolid
+    StateNormal.FontEx.Color = 16770790
+    StateNormal.FontEx.FontQuality = fqSystemClearType
+    StateNormal.FontEx.Height = -20
+    StateNormal.FontEx.Shadow = False
+    StateNormal.FontEx.ShadowRadius = 2
+    StateNormal.FontEx.ShadowOffsetX = 1
+    StateNormal.FontEx.ShadowOffsetY = 1
+    StateNormal.FontEx.Style = [fsBold]
+    Caption = 'Solve'
+    Color = clNone
+    DropDownWidth = 16
+    DropDownArrowSize = 8
+    GlobalOpacity = 255
+    OnClick = SolveButtonClick
+    ParentColor = False
+    Rounding.RoundX = 12
+    Rounding.RoundY = 12
+    RoundingDropDown.RoundX = 1
+    RoundingDropDown.RoundY = 1
+    StaticButton = True
+    TextApplyGlobalOpacity = False
+    MemoryUsage = bmuLow
+  end
   object DebugLabel: TLabel
-    Left = 96
+    Left = 128
     Height = 15
     Top = 304
     Width = 102
@@ -112,23 +208,25 @@ object Form1: TForm1
     Font.Color = clWhite
     ParentFont = False
   end
-  object SolveButton: TButton
-    Left = 219
-    Height = 41
-    Top = 304
-    Width = 75
-    Caption = 'Solve'
+  object Input11: TEdit
+    Left = 40
+    Height = 30
+    Top = 8
+    Width = 30
+    Alignment = taCenter
+    AutoSize = False
+    BorderStyle = bsNone
     Font.CharSet = ANSI_CHARSET
-    Font.Height = -16
-    Font.Name = 'Tahoma'
+    Font.Height = -19
     Font.Pitch = fpVariable
     Font.Quality = fqDraft
+    MaxLength = 1
+    NumbersOnly = True
     ParentFont = False
     TabOrder = 0
-    OnClick = SolveButtonClick
   end
-  object Input11: TEdit
-    Left = 8
+  object Input12: TEdit
+    Left = 72
     Height = 30
     Top = 8
     Width = 30
@@ -144,8 +242,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 1
   end
-  object Input12: TEdit
-    Left = 40
+  object Input13: TEdit
+    Left = 104
     Height = 30
     Top = 8
     Width = 30
@@ -161,8 +259,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 2
   end
-  object Input13: TEdit
-    Left = 72
+  object Input14: TEdit
+    Left = 136
     Height = 30
     Top = 8
     Width = 30
@@ -178,8 +276,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 3
   end
-  object Input14: TEdit
-    Left = 104
+  object Input15: TEdit
+    Left = 168
     Height = 30
     Top = 8
     Width = 30
@@ -195,8 +293,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 4
   end
-  object Input15: TEdit
-    Left = 136
+  object Input16: TEdit
+    Left = 200
     Height = 30
     Top = 8
     Width = 30
@@ -212,8 +310,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 5
   end
-  object Input16: TEdit
-    Left = 168
+  object Input17: TEdit
+    Left = 232
     Height = 30
     Top = 8
     Width = 30
@@ -229,8 +327,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 6
   end
-  object Input17: TEdit
-    Left = 200
+  object Input18: TEdit
+    Left = 264
     Height = 30
     Top = 8
     Width = 30
@@ -246,8 +344,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 7
   end
-  object Input18: TEdit
-    Left = 232
+  object Input19: TEdit
+    Left = 296
     Height = 30
     Top = 8
     Width = 30
@@ -263,10 +361,10 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 8
   end
-  object Input19: TEdit
-    Left = 264
+  object Input21: TEdit
+    Left = 40
     Height = 30
-    Top = 8
+    Top = 40
     Width = 30
     Alignment = taCenter
     AutoSize = False
@@ -280,8 +378,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 9
   end
-  object Input21: TEdit
-    Left = 8
+  object Input22: TEdit
+    Left = 72
     Height = 30
     Top = 40
     Width = 30
@@ -297,8 +395,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 10
   end
-  object Input22: TEdit
-    Left = 40
+  object Input23: TEdit
+    Left = 104
     Height = 30
     Top = 40
     Width = 30
@@ -314,8 +412,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 11
   end
-  object Input23: TEdit
-    Left = 72
+  object Input24: TEdit
+    Left = 136
     Height = 30
     Top = 40
     Width = 30
@@ -331,8 +429,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 12
   end
-  object Input24: TEdit
-    Left = 104
+  object Input25: TEdit
+    Left = 168
     Height = 30
     Top = 40
     Width = 30
@@ -348,8 +446,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 13
   end
-  object Input25: TEdit
-    Left = 136
+  object Input26: TEdit
+    Left = 200
     Height = 30
     Top = 40
     Width = 30
@@ -365,8 +463,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 14
   end
-  object Input26: TEdit
-    Left = 168
+  object Input27: TEdit
+    Left = 232
     Height = 30
     Top = 40
     Width = 30
@@ -382,8 +480,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 15
   end
-  object Input27: TEdit
-    Left = 200
+  object Input28: TEdit
+    Left = 264
     Height = 30
     Top = 40
     Width = 30
@@ -399,8 +497,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 16
   end
-  object Input28: TEdit
-    Left = 232
+  object Input29: TEdit
+    Left = 296
     Height = 30
     Top = 40
     Width = 30
@@ -416,10 +514,10 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 17
   end
-  object Input29: TEdit
-    Left = 264
+  object Input31: TEdit
+    Left = 40
     Height = 30
-    Top = 40
+    Top = 72
     Width = 30
     Alignment = taCenter
     AutoSize = False
@@ -433,8 +531,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 18
   end
-  object Input31: TEdit
-    Left = 8
+  object Input32: TEdit
+    Left = 72
     Height = 30
     Top = 72
     Width = 30
@@ -450,8 +548,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 19
   end
-  object Input32: TEdit
-    Left = 40
+  object Input33: TEdit
+    Left = 104
     Height = 30
     Top = 72
     Width = 30
@@ -467,8 +565,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 20
   end
-  object Input33: TEdit
-    Left = 72
+  object Input34: TEdit
+    Left = 136
     Height = 30
     Top = 72
     Width = 30
@@ -484,8 +582,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 21
   end
-  object Input34: TEdit
-    Left = 104
+  object Input35: TEdit
+    Left = 168
     Height = 30
     Top = 72
     Width = 30
@@ -501,8 +599,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 22
   end
-  object Input35: TEdit
-    Left = 136
+  object Input36: TEdit
+    Left = 200
     Height = 30
     Top = 72
     Width = 30
@@ -518,8 +616,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 23
   end
-  object Input36: TEdit
-    Left = 168
+  object Input37: TEdit
+    Left = 232
     Height = 30
     Top = 72
     Width = 30
@@ -535,8 +633,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 24
   end
-  object Input37: TEdit
-    Left = 200
+  object Input38: TEdit
+    Left = 264
     Height = 30
     Top = 72
     Width = 30
@@ -552,8 +650,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 25
   end
-  object Input38: TEdit
-    Left = 232
+  object Input39: TEdit
+    Left = 296
     Height = 30
     Top = 72
     Width = 30
@@ -569,10 +667,10 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 26
   end
-  object Input39: TEdit
-    Left = 264
+  object Input41: TEdit
+    Left = 40
     Height = 30
-    Top = 72
+    Top = 104
     Width = 30
     Alignment = taCenter
     AutoSize = False
@@ -586,8 +684,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 27
   end
-  object Input41: TEdit
-    Left = 8
+  object Input42: TEdit
+    Left = 72
     Height = 30
     Top = 104
     Width = 30
@@ -603,8 +701,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 28
   end
-  object Input42: TEdit
-    Left = 40
+  object Input43: TEdit
+    Left = 104
     Height = 30
     Top = 104
     Width = 30
@@ -620,8 +718,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 29
   end
-  object Input43: TEdit
-    Left = 72
+  object Input44: TEdit
+    Left = 136
     Height = 30
     Top = 104
     Width = 30
@@ -637,8 +735,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 30
   end
-  object Input44: TEdit
-    Left = 104
+  object Input45: TEdit
+    Left = 168
     Height = 30
     Top = 104
     Width = 30
@@ -654,8 +752,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 31
   end
-  object Input45: TEdit
-    Left = 136
+  object Input46: TEdit
+    Left = 200
     Height = 30
     Top = 104
     Width = 30
@@ -671,8 +769,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 32
   end
-  object Input46: TEdit
-    Left = 168
+  object Input47: TEdit
+    Left = 232
     Height = 30
     Top = 104
     Width = 30
@@ -688,8 +786,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 33
   end
-  object Input47: TEdit
-    Left = 200
+  object Input48: TEdit
+    Left = 264
     Height = 30
     Top = 104
     Width = 30
@@ -705,8 +803,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 34
   end
-  object Input48: TEdit
-    Left = 232
+  object Input49: TEdit
+    Left = 296
     Height = 30
     Top = 104
     Width = 30
@@ -722,10 +820,10 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 35
   end
-  object Input49: TEdit
-    Left = 264
+  object Input51: TEdit
+    Left = 40
     Height = 30
-    Top = 104
+    Top = 136
     Width = 30
     Alignment = taCenter
     AutoSize = False
@@ -739,8 +837,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 36
   end
-  object Input51: TEdit
-    Left = 8
+  object Input52: TEdit
+    Left = 72
     Height = 30
     Top = 136
     Width = 30
@@ -756,8 +854,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 37
   end
-  object Input52: TEdit
-    Left = 40
+  object Input53: TEdit
+    Left = 104
     Height = 30
     Top = 136
     Width = 30
@@ -773,8 +871,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 38
   end
-  object Input53: TEdit
-    Left = 72
+  object Input54: TEdit
+    Left = 136
     Height = 30
     Top = 136
     Width = 30
@@ -790,8 +888,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 39
   end
-  object Input54: TEdit
-    Left = 104
+  object Input55: TEdit
+    Left = 168
     Height = 30
     Top = 136
     Width = 30
@@ -807,8 +905,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 40
   end
-  object Input55: TEdit
-    Left = 136
+  object Input56: TEdit
+    Left = 200
     Height = 30
     Top = 136
     Width = 30
@@ -824,8 +922,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 41
   end
-  object Input56: TEdit
-    Left = 168
+  object Input57: TEdit
+    Left = 232
     Height = 30
     Top = 136
     Width = 30
@@ -841,8 +939,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 42
   end
-  object Input57: TEdit
-    Left = 200
+  object Input58: TEdit
+    Left = 264
     Height = 30
     Top = 136
     Width = 30
@@ -858,8 +956,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 43
   end
-  object Input58: TEdit
-    Left = 232
+  object Input59: TEdit
+    Left = 296
     Height = 30
     Top = 136
     Width = 30
@@ -875,10 +973,10 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 44
   end
-  object Input59: TEdit
-    Left = 264
+  object Input61: TEdit
+    Left = 40
     Height = 30
-    Top = 136
+    Top = 168
     Width = 30
     Alignment = taCenter
     AutoSize = False
@@ -892,8 +990,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 45
   end
-  object Input61: TEdit
-    Left = 8
+  object Input62: TEdit
+    Left = 72
     Height = 30
     Top = 168
     Width = 30
@@ -909,8 +1007,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 46
   end
-  object Input62: TEdit
-    Left = 40
+  object Input63: TEdit
+    Left = 104
     Height = 30
     Top = 168
     Width = 30
@@ -926,8 +1024,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 47
   end
-  object Input63: TEdit
-    Left = 72
+  object Input64: TEdit
+    Left = 136
     Height = 30
     Top = 168
     Width = 30
@@ -943,8 +1041,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 48
   end
-  object Input64: TEdit
-    Left = 104
+  object Input65: TEdit
+    Left = 168
     Height = 30
     Top = 168
     Width = 30
@@ -960,8 +1058,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 49
   end
-  object Input65: TEdit
-    Left = 136
+  object Input66: TEdit
+    Left = 200
     Height = 30
     Top = 168
     Width = 30
@@ -977,8 +1075,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 50
   end
-  object Input66: TEdit
-    Left = 168
+  object Input67: TEdit
+    Left = 232
     Height = 30
     Top = 168
     Width = 30
@@ -994,8 +1092,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 51
   end
-  object Input67: TEdit
-    Left = 200
+  object Input68: TEdit
+    Left = 264
     Height = 30
     Top = 168
     Width = 30
@@ -1011,8 +1109,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 52
   end
-  object Input68: TEdit
-    Left = 232
+  object Input69: TEdit
+    Left = 296
     Height = 30
     Top = 168
     Width = 30
@@ -1028,10 +1126,10 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 53
   end
-  object Input69: TEdit
-    Left = 264
+  object Input71: TEdit
+    Left = 40
     Height = 30
-    Top = 168
+    Top = 200
     Width = 30
     Alignment = taCenter
     AutoSize = False
@@ -1045,8 +1143,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 54
   end
-  object Input71: TEdit
-    Left = 8
+  object Input72: TEdit
+    Left = 72
     Height = 30
     Top = 200
     Width = 30
@@ -1062,8 +1160,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 55
   end
-  object Input72: TEdit
-    Left = 40
+  object Input73: TEdit
+    Left = 104
     Height = 30
     Top = 200
     Width = 30
@@ -1079,8 +1177,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 56
   end
-  object Input73: TEdit
-    Left = 72
+  object Input74: TEdit
+    Left = 136
     Height = 30
     Top = 200
     Width = 30
@@ -1096,8 +1194,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 57
   end
-  object Input74: TEdit
-    Left = 104
+  object Input75: TEdit
+    Left = 168
     Height = 30
     Top = 200
     Width = 30
@@ -1113,8 +1211,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 58
   end
-  object Input75: TEdit
-    Left = 136
+  object Input76: TEdit
+    Left = 200
     Height = 30
     Top = 200
     Width = 30
@@ -1130,8 +1228,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 59
   end
-  object Input76: TEdit
-    Left = 168
+  object Input77: TEdit
+    Left = 232
     Height = 30
     Top = 200
     Width = 30
@@ -1147,8 +1245,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 60
   end
-  object Input77: TEdit
-    Left = 200
+  object Input78: TEdit
+    Left = 264
     Height = 30
     Top = 200
     Width = 30
@@ -1164,8 +1262,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 61
   end
-  object Input78: TEdit
-    Left = 232
+  object Input79: TEdit
+    Left = 296
     Height = 30
     Top = 200
     Width = 30
@@ -1181,10 +1279,10 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 62
   end
-  object Input79: TEdit
-    Left = 264
+  object Input81: TEdit
+    Left = 40
     Height = 30
-    Top = 200
+    Top = 232
     Width = 30
     Alignment = taCenter
     AutoSize = False
@@ -1198,8 +1296,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 63
   end
-  object Input81: TEdit
-    Left = 8
+  object Input82: TEdit
+    Left = 72
     Height = 30
     Top = 232
     Width = 30
@@ -1215,8 +1313,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 64
   end
-  object Input82: TEdit
-    Left = 40
+  object Input83: TEdit
+    Left = 104
     Height = 30
     Top = 232
     Width = 30
@@ -1232,8 +1330,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 65
   end
-  object Input83: TEdit
-    Left = 72
+  object Input84: TEdit
+    Left = 136
     Height = 30
     Top = 232
     Width = 30
@@ -1249,8 +1347,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 66
   end
-  object Input84: TEdit
-    Left = 104
+  object Input85: TEdit
+    Left = 168
     Height = 30
     Top = 232
     Width = 30
@@ -1266,8 +1364,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 67
   end
-  object Input85: TEdit
-    Left = 136
+  object Input86: TEdit
+    Left = 200
     Height = 30
     Top = 232
     Width = 30
@@ -1283,8 +1381,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 68
   end
-  object Input86: TEdit
-    Left = 168
+  object Input87: TEdit
+    Left = 232
     Height = 30
     Top = 232
     Width = 30
@@ -1300,8 +1398,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 69
   end
-  object Input87: TEdit
-    Left = 200
+  object Input88: TEdit
+    Left = 264
     Height = 30
     Top = 232
     Width = 30
@@ -1317,8 +1415,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 70
   end
-  object Input88: TEdit
-    Left = 232
+  object Input89: TEdit
+    Left = 296
     Height = 30
     Top = 232
     Width = 30
@@ -1334,10 +1432,10 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 71
   end
-  object Input89: TEdit
-    Left = 264
+  object Input91: TEdit
+    Left = 40
     Height = 30
-    Top = 232
+    Top = 264
     Width = 30
     Alignment = taCenter
     AutoSize = False
@@ -1351,8 +1449,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 72
   end
-  object Input91: TEdit
-    Left = 8
+  object Input92: TEdit
+    Left = 72
     Height = 30
     Top = 264
     Width = 30
@@ -1368,8 +1466,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 73
   end
-  object Input92: TEdit
-    Left = 40
+  object Input93: TEdit
+    Left = 104
     Height = 30
     Top = 264
     Width = 30
@@ -1385,8 +1483,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 74
   end
-  object Input93: TEdit
-    Left = 72
+  object Input94: TEdit
+    Left = 136
     Height = 30
     Top = 264
     Width = 30
@@ -1402,8 +1500,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 75
   end
-  object Input94: TEdit
-    Left = 104
+  object Input95: TEdit
+    Left = 168
     Height = 30
     Top = 264
     Width = 30
@@ -1419,8 +1517,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 76
   end
-  object Input95: TEdit
-    Left = 136
+  object Input96: TEdit
+    Left = 200
     Height = 30
     Top = 264
     Width = 30
@@ -1436,8 +1534,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 77
   end
-  object Input96: TEdit
-    Left = 168
+  object Input97: TEdit
+    Left = 232
     Height = 30
     Top = 264
     Width = 30
@@ -1453,8 +1551,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 78
   end
-  object Input97: TEdit
-    Left = 200
+  object Input98: TEdit
+    Left = 264
     Height = 30
     Top = 264
     Width = 30
@@ -1470,8 +1568,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 79
   end
-  object Input98: TEdit
-    Left = 232
+  object Input99: TEdit
+    Left = 296
     Height = 30
     Top = 264
     Width = 30
@@ -1487,25 +1585,8 @@ object Form1: TForm1
     ParentFont = False
     TabOrder = 80
   end
-  object Input99: TEdit
-    Left = 264
-    Height = 30
-    Top = 264
-    Width = 30
-    Alignment = taCenter
-    AutoSize = False
-    BorderStyle = bsNone
-    Font.CharSet = ANSI_CHARSET
-    Font.Height = -19
-    Font.Pitch = fpVariable
-    Font.Quality = fqDraft
-    MaxLength = 1
-    NumbersOnly = True
-    ParentFont = False
-    TabOrder = 81
-  end
   object ShapeLineBGRA1: TShapeLineBGRA
-    Left = 8
+    Left = 40
     Height = 16
     Top = 96
     Width = 286
@@ -1514,7 +1595,7 @@ object Form1: TForm1
     LineWidth = 3
   end
   object ShapeLineBGRA2: TShapeLineBGRA
-    Left = 8
+    Left = 40
     Height = 16
     Top = 192
     Width = 286
@@ -1523,7 +1604,7 @@ object Form1: TForm1
     LineWidth = 3
   end
   object ShapeLineBGRA3: TShapeLineBGRA
-    Left = 96
+    Left = 128
     Height = 286
     Top = 8
     Width = 16
@@ -1533,7 +1614,7 @@ object Form1: TForm1
     LineWidth = 3
   end
   object ShapeLineBGRA4: TShapeLineBGRA
-    Left = 192
+    Left = 224
     Height = 286
     Top = 8
     Width = 16
