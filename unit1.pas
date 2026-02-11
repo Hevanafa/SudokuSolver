@@ -10,6 +10,7 @@ uses
   Graphics, Dialogs, StdCtrls, ATShapeLineBGRA, BCButton;
 
 type
+  TSudokuGrid = array[0..8, 0..8] of integer;
 
   { TForm1 }
 
@@ -125,7 +126,10 @@ type
     defaultForeground: longword;
     readonlyForeground: longword;
 
+    stateGrid: TSudokuGrid;
     solvedGrid: array[0..8, 0..8] of boolean;  { solved by the algorithm }
+
+    procedure debugNumbers;
   public
 
   end;
@@ -141,9 +145,6 @@ uses LCLType;
 {$R *.lfm}
 
 { TForm1 }
-
-type
-  TSudokuGrid = array[0..8, 0..8] of integer;
 
 function usedInRow(const grid: TSudokuGrid; const row, num: integer): boolean;
 var
@@ -360,7 +361,10 @@ begin
 end;
 
 
-procedure debugNumbers;
+procedure TForm1.debugNumbers;
+var
+  tempStr: string;
+  row, col: smallint;
 begin
   { Debug numbers }
   DebugLabel.caption := '';
@@ -368,9 +372,9 @@ begin
     tempStr := '';
     for col:=0 to 8 do
       if col = 8 then
-        tempStr := tempStr + inttostr(grid[row][col])
+        tempStr := tempStr + inttostr(stateGrid[row][col])
       else
-        tempStr := tempStr + inttostr(grid[row][col]) + ', ';
+        tempStr := tempStr + inttostr(stateGrid[row][col]) + ', ';
 
     DebugLabel.caption := DebugLabel.caption + tempStr + chr(13);
   end;
@@ -380,7 +384,6 @@ procedure TForm1.SolveButtonClick(Sender: TObject);
 var
   row, col: integer;
   val: integer;
-  grid: TSudokuGrid;
   inputbox: TEdit;
   tempStr: string;
 begin
@@ -388,16 +391,16 @@ begin
   for col:=1 to 9 do begin
     inputbox := getEdit(row, col);
     if TryStrToInt(inputbox.text, val) then
-      grid[row-1][col-1] := val
+      stateGrid[row-1][col-1] := val
     else
-      grid[row-1][col-1] := 0;
+      stateGrid[row-1][col-1] := 0;
   end;
 
   for row:=0 to 8 do
   for col:=0 to 8 do
     solvedGrid[row][col] := false;
 
-  if solveSudoku(grid) then
+  if solveSudoku(stateGrid) then
     for row:=1 to 9 do
     for col:=1 to 9 do begin
       solvedGrid[row-1][col-1] := true;
@@ -411,7 +414,7 @@ begin
         inputbox.Font.Color := defaultForeground;
       end;
 
-      inputbox.text := inttostr(grid[row-1][col-1]);
+      inputbox.text := inttostr(stateGrid[row-1][col-1]);
     end
   else
     MessageDlg('No solutions found', mtInformation, [mbOK], 0);
