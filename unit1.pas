@@ -7,13 +7,14 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls,
-  Graphics, Dialogs, StdCtrls, ATShapeLineBGRA;
+  Graphics, Dialogs, StdCtrls, ATShapeLineBGRA, BCButton;
 
 type
 
   { TForm1 }
 
   TForm1 = class(TForm)
+    ClearButton: TBCButton;
     Input11: TEdit;
     Input12: TEdit;
     Input13: TEdit;
@@ -101,7 +102,6 @@ type
     ShapeLineBGRA3: TShapeLineBGRA;
     ShapeLineBGRA4: TShapeLineBGRA;
     SolveButton: TButton;
-    ClearButton: TButton;
 
     procedure FormShow(Sender: TObject);
 
@@ -360,6 +360,22 @@ begin
 end;
 
 
+procedure debugNumbers;
+begin
+  { Debug numbers }
+  DebugLabel.caption := '';
+  for row:=0 to 8 do begin
+    tempStr := '';
+    for col:=0 to 8 do
+      if col = 8 then
+        tempStr := tempStr + inttostr(grid[row][col])
+      else
+        tempStr := tempStr + inttostr(grid[row][col]) + ', ';
+
+    DebugLabel.caption := DebugLabel.caption + tempStr + chr(13);
+  end;
+end;
+
 procedure TForm1.SolveButtonClick(Sender: TObject);
 var
   row, col: integer;
@@ -380,19 +396,6 @@ begin
   for row:=0 to 8 do
   for col:=0 to 8 do
     solvedGrid[row][col] := false;
-
-  { Debug numbers }
-  DebugLabel.caption := '';
-  for row:=0 to 8 do begin
-    tempStr := '';
-    for col:=0 to 8 do
-      if col = 8 then
-        tempStr := tempStr + inttostr(grid[row][col])
-      else
-        tempStr := tempStr + inttostr(grid[row][col]) + ', ';
-
-    DebugLabel.caption := DebugLabel.caption + tempStr + chr(13);
-  end;
 
   if solveSudoku(grid) then
     for row:=1 to 9 do
@@ -423,15 +426,15 @@ begin
 
   DebugLabel.caption := '';
 
-  for b:=0 to 8 do
-  for a:=0 to 8 do begin
+  for b:=1 to 9 do
+  for a:=1 to 9 do begin
     inputbox := getEdit(b, a);
 
     if assigned(inputbox) then begin
       inputbox.text := '';
       inputbox.font.bold := false;
-      inputbox.color := clWhite;
-      inputbox.enabled := true;
+      inputbox.color := defaultBackground;
+      inputbox.font.Color := defaultForeground;
       inputbox.ReadOnly := false;
     end;
   end;
