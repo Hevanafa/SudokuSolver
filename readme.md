@@ -35,3 +35,7 @@ You can install additional online packages by **Package > Online Package Manager
 1. Open `project.lpi` with Lazarus IDE
 2. Change the build mode to **Release**
 3. Make with **Run > Compile** (also by `Ctrl+F9`)
+
+## Credits
+
+I made the icon assets with [Aseprite](https://www.aseprite.org/) and [Greenfish Icon Editor Pro 4.5](https://greenfishsoftware.org/gfie.php)
