@@ -2,12 +2,12 @@ object Form1: TForm1
   Left = 336
   Height = 356
   Top = 101
-  Width = 426
+  Width = 308
   BorderIcons = [biSystemMenu, biMinimize]
   BorderStyle = bsSingle
   Caption = 'Sudoku Solver - By Hevanafa (Feb 2026)'
   ClientHeight = 356
-  ClientWidth = 426
+  ClientWidth = 308
   OnShow = FormShow
   object ClearButton: TButton
     Left = 8
@@ -25,9 +25,9 @@ object Form1: TForm1
     OnClick = ClearButtonClick
   end
   object DebugLabel: TLabel
-    Left = 312
+    Left = 88
     Height = 15
-    Top = 8
+    Top = 304
     Width = 102
     Caption = '1, 2, 3, 4, 5, 6, 7, 8, 9'
     Font.Color = clWhite

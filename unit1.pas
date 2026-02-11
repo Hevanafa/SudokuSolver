@@ -122,6 +122,9 @@ type
     highlight2: longword;  { subtle highlight }
     accent: longword;
 
+    defaultForeground: longword;
+    readonlyForeground: longword;
+
     solvedGrid: array[0..8, 0..8] of boolean;  { solved by the algorithm }
   public
 
@@ -318,10 +321,14 @@ var
   a, b: word;
   inputbox: TEdit;
 begin
+  { Define theme colours here }
   defaultBackground := RGBToBGR($202020);
   accent := RGBToBGR($ECF708);
   highlight1 := RGBToBGR($8f9907);
   highlight2 := RGBToBGR($555b04);
+
+  defaultForeground := clWhite;
+  readonlyForeground := RGBToBGR($999999);
 
   color := defaultBackground;
 
@@ -330,7 +337,7 @@ begin
     inputbox := getEdit(b, a);
 
     inputbox.Color := defaultBackground;
-    inputbox.Font.Color := clWhite;
+    inputbox.Font.Color := defaultForeground;
 
     inputbox.OnKeyDown := EditKeyDown;
     inputbox.OnChange := EditChange;
@@ -391,11 +398,14 @@ begin
     for row:=1 to 9 do
     for col:=1 to 9 do begin
       solvedGrid[row-1][col-1] := true;
+
       inputbox := getEdit(row, col);
+      inputbox.ReadOnly := true;
+      inputbox.font.color := readonlyForeground;
 
       if length(inputbox.text) = 0 then begin
         inputbox.Font.Bold := true;
-        inputbox.color := clSkyBlue;
+        inputbox.Font.Color := defaultForeground;
       end;
 
       inputbox.text := inttostr(grid[row-1][col-1]);
@@ -422,6 +432,7 @@ begin
       inputbox.font.bold := false;
       inputbox.color := clWhite;
       inputbox.enabled := true;
+      inputbox.ReadOnly := false;
     end;
   end;
 end;
