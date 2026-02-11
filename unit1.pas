@@ -104,7 +104,6 @@ type
     ClearButton: TButton;
     Edit1: TEdit;
 
-    procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
 
     function getEditName(const row, col: integer): string;
@@ -272,8 +271,8 @@ var
   a, b: word;
   inputbox: TEdit;
 begin
-  for b:=0 to 8 do
-  for a:=0 to 8 do begin
+  for b:=1 to 9 do
+  for a:=1 to 9 do begin
     inputbox := getEdit(b, a);
     inputbox.OnKeyDown := EditKeyDown;
     inputbox.OnChange := EditChange;
@@ -303,13 +302,13 @@ var
   inputbox: TEdit;
   tempStr: string;
 begin
-  for row:=0 to 8 do
-  for col:=0 to 8 do begin
+  for row:=1 to 9 do
+  for col:=1 to 9 do begin
     inputbox := getEdit(row, col);
     if TryStrToInt(inputbox.text, val) then
-      grid[row][col] := val
+      grid[row-1][col-1] := val
     else
-      grid[row][col] := 0;
+      grid[row-1][col-1] := 0;
   end;
 
   { Debug numbers }
@@ -326,8 +325,8 @@ begin
   end;
 
   if solveSudoku(grid) then
-    for row:=0 to 8 do
-      for col:=0 to 8 do begin
+    for row:=1 to 9 do
+      for col:=1 to 9 do begin
         inputbox := getEdit(row, col);
 
         if length(inputbox.text) = 0 then begin
@@ -335,12 +334,10 @@ begin
           inputbox.color := clSkyBlue;
         end;
 
-        inputbox.text := inttostr(grid[row][col]);
-        { inputbox.Enabled := false; }
+        inputbox.text := inttostr(grid[row-1][col-1]);
       end
   else
     MessageDlg('No solutions found', mtInformation, [mbOK], 0);
-
 end;
 
 procedure TForm1.ClearButtonClick(Sender: TObject);
@@ -386,7 +383,7 @@ begin
     vk_right: inc(col);
   end;
 
-  if (row in [0..8]) and (col in [0..8]) then
+  if (row in [1..9]) and (col in [1..9]) then
     getEdit(row, col).SetFocus;
 end;
 
@@ -405,11 +402,11 @@ begin
     inc(col);
 
     { Handle wrapping }
-    if col >= 9 then begin
+    if col > 9 then begin
       inc(row);
-      col := 0
+      col := 1
     end;
-    if row >= 9 then row := 0;
+    if row > 9 then row := 1;
 
     getEdit(row, col).setFocus
   end;
