@@ -15,6 +15,7 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
+    VersionLabel: TLabel;
     SolveButton: TBCButton;
     ClearButton: TBCButton;
     Input11: TEdit;
