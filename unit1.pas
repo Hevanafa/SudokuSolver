@@ -118,6 +118,8 @@ type
   private
     { Colours are in BGR }
     defaultBackground: longword;
+    highlight1: longword;
+    highlight2: longword;  { subtle highlight }
     accent: longword;
 
     solvedGrid: array[0..8, 0..8] of boolean;  { solved by the algorithm }
@@ -274,7 +276,7 @@ var
   thisEdit: TEdit;
 begin
   thisEdit := TEdit(sender);
-  thisEdit.Color := RGBToBGR($6495ED);
+  thisEdit.Color := highlight1;
   thisEdit.SelectAll
 end;
 
@@ -292,7 +294,9 @@ var
   inputbox: TEdit;
 begin
   defaultBackground := RGBToBGR($202020);
-  accent := RGBToBGR($F8C056);
+  accent := RGBToBGR($ECF708);
+  highlight1 := RGBToBGR($555b04);
+  highlight2 := RGBToBGR($8f9907);
 
   color := defaultBackground;
 
@@ -301,6 +305,7 @@ begin
     inputbox := getEdit(b, a);
 
     inputbox.Color := defaultBackground;
+    inputbox.Font.Color := clWhite;
 
     inputbox.OnKeyDown := EditKeyDown;
     inputbox.OnChange := EditChange;
